@@ -1,5 +1,15 @@
 import sys
 
+#Implementation of the Sieve of Eratosthenes
+
+#Returns a list of all prime numbers less than "upper_limit"
+
+#Works by generating a list of booleans for each positive integer less than upper limit and then crossing off multiples of primes
+
+#E.g. first it eliminates all even numbers (except 2) then all multiples of 3 (that weren't already eliminated) then 5, etc.
+
+#Used in many project euler problems, so I usually just import and reuse this
+
 def Sieve_Primes(upper_limit):
     is_prime = [True] * upper_limit
     is_prime[0] = is_prime[1] = False
